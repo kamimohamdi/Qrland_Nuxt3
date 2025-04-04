@@ -117,7 +117,7 @@
           ]"
         >
           <swipperComponents
-            :images="custom.dataCustom.picture.shopingInformations.pictures"
+            :images="gallery"
             :size="{ height: '100vh', width: '100%', type: 'image' }"
           />
         </v-main>
@@ -129,6 +129,10 @@
 import { useThem } from "~/store/customThem";
 import { useCustomStore } from "~/store/customSettings";
 import swipperComponents from "~/utilities/swipperComponents.vue";
+import { useData } from "~/store/data";
+const data = useData();
+
+const gallery = data.banner;
 const them = useThem();
 const custom = useCustomStore();
 const switchThem = ref<boolean>(false);
