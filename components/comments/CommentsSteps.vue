@@ -1,6 +1,6 @@
 <template>
   <div class="w-[80%] flex my-2 flex-col">
-    <Mark title="بازخورد شما برای ما اهمیت دارد" />
+    <Mark :title="feeds.description" />
     <v-stepper
       v-model="step"
       :style="[
@@ -14,23 +14,25 @@
         <v-btn color="red" v-bind="props">قبلی</v-btn>
       </template>
       <template #next="{ props }">
-        <v-btn color="primary" v-bind="props" v-if="step < 5">بعدی</v-btn>
+        <v-btn v-if="step < feeds.items.length" color="primary" v-bind="props"
+          >بعدی</v-btn
+        >
       </template>
-      <template v-if="step == 5" #actions>
-        <v-btn
-          variant="tonal"
-          :disabled="feedBack[4].comment.length < 4"
-          color="primary"
-          class="outlined"
+      <template v-if="step == feedBack.length" #actions>
+        <v-btn variant="tonal" color="primary" class="outlined mr-5 mb-5"
           >ثبت</v-btn
         >
       </template>
 
-      <template v-slot:item.1>
-        <h2 class="text-sm">آیا از کیفیت کالاها رضایت داشتید؟</h2>
-        <div class="my-3" dir="rtl">
+      <template
+        v-for="(question, i) in feeds?.items"
+        :key="i"
+        v-slot:[`item.${i+1}`]
+      >
+        <h2 class="text-sm">{{ question.question }}</h2>
+        <div class="my-3" dir="rtl" v-if="question.value">
           <v-textarea
-            v-model="feedBack[0].comment"
+            v-model="feedBack[i].comment"
             row-height="25"
             rows="3"
             variant="outlined"
@@ -43,327 +45,40 @@
         </div>
         <div class="h-14 w-full flex justify-center align-center">
           <v-btn
+            v-for="(emoji, rate) in type[
+              question.type ? question.type : 'none'
+            ]"
+            :key="rate"
             class="text-h4"
             :style="[
               'box-shadow: none',
               'with: 50px',
               ' height: 50px',
-              `filter:${feedBack[0].feed == 5 ? 'none' : 'grayscale(100%)'}`,
+              `filter:${
+                feedBack[i].feed == rate + 1 ? 'none' : 'grayscale(100%)'
+              }`,
             ]"
-            @click="feedBack[0].feed = 5"
-            >😍</v-btn
+            v-if="question.type"
+            @click="
+              feedBack[i].feed = rate + 1;
+              alert('ok');
+            "
           >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[0].feed == 4 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[0].feed = 4"
-            >😊</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[0].feed == 3 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[0].feed = 3"
-            >😐</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              ' filter: none',
-              ,
-              `filter:${feedBack[0].feed == 2 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[0].feed = 2"
-            >😕</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[0].feed == 1 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[0].feed = 1"
-            >😥</v-btn
-          >
-        </div>
-      </template>
-
-      <template v-slot:item.2>
-        <h2 class="text-sm">کیفیت بسته بندی را چگونه ارزیابی می کنید؟</h2>
-        <div class="h-16 w-full flex justify-center align-center">
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[1].feed == 5 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[1].feed = 5"
-            >😍</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[1].feed == 4 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[1].feed = 4"
-            >😊</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[1].feed == 3 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[1].feed = 3"
-            >😐</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              ' filter: none',
-              ,
-              `filter:${feedBack[1].feed == 2 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[1].feed = 2"
-            >😕</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[1].feed == 1 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[1].feed = 1"
-            >😥</v-btn
-          >
-        </div>
-      </template>
-
-      <template v-slot:item.3>
-        <h2 class="text-sm">آیا از تنوع کالاها راضی بودید؟</h2>
-        <div class="h-16 w-full flex justify-center align-center">
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[2].feed == 5 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[2].feed = 5"
-            >😍</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[2].feed == 4 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[2].feed = 4"
-            >😊</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[2].feed == 3 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[2].feed = 3"
-            >😐</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              ' filter: none',
-              ,
-              `filter:${feedBack[2].feed == 2 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[2].feed = 2"
-            >😕</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[2].feed == 1 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[2].feed = 1"
-            >😥</v-btn
-          >
-        </div>
-      </template>
-      <template v-slot:item.4>
-        <h2 class="text-sm">آیا از تخفیفات این فروشگاه هم بهره مند شده اید؟</h2>
-        <div class="h-16 w-full flex justify-center align-center">
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[3].feed == 5 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[3].feed = 5"
-            >😍</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[3].feed == 4 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[3].feed = 4"
-            >😊</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[3].feed == 3 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[3].feed = 3"
-            >😐</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              ' filter: none',
-              ,
-              `filter:${feedBack[3].feed == 2 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[3].feed = 2"
-            >😕</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[3].feed == 1 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[3].feed = 1"
-            >😥</v-btn
-          >
-        </div>
-      </template>
-      <template v-slot:item.5>
-        <h2 class="text-sm">
-          برای بهبود تجربه خرید از این فروشگاه چه پیشنهادی دارید؟
-        </h2>
-        <div class="my-3" dir="rtl">
-          <v-textarea
-            v-model="feedBack[4].comment"
-            row-height="25"
-            rows="3"
-            variant="outlined"
-            label="توضیحات (اجباری)"
-            auto-grow
-            dir="rtl"
-            class="custom-textarea"
-            :rules="[(v) => v.length > 3 || 'باید حداقل ۳ کارکتر را وارد کنید']"
-          />
-        </div>
-        <div class="h-16 w-full flex justify-center align-center">
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[4].feed == 5 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[4].feed = 5"
-            >😍</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              `filter:${feedBack[4].feed == 4 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[4].feed = 4"
-            >😊</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[4].feed == 3 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[4].feed = 3"
-            >😐</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
-              ' filter: none',
-              ,
-              `filter:${feedBack[4].feed == 2 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[4].feed = 2"
-            >😕</v-btn
-          >
-          <v-btn
-            class="text-h4"
-            :style="[
-              'box-shadow: none',
-              'with: 50px',
-              'height: 50px',
-              `filter:${feedBack[4].feed == 1 ? 'none' : 'grayscale(100%)'}`,
-            ]"
-            @click="feedBack[4].feed = 1"
-            >😥</v-btn
-          >
+            {{ emoji.icon }}
+          </v-btn>
+          <div v-else class="w-[80%] h-6 flex justify-center gap-4">
+            <span
+              v-for="(title, j) in type['none']"
+              :key="j"
+              class="text-sm cursor-pointer"
+              :style="[
+                `color:${feedBack[i].feed === j + 1 ? 'green' : 'gray'}`,
+              ]"
+              @click="feedBack[i].feed = j + 1"
+            >
+              {{ title.icon }}</span
+            >
+          </div>
         </div>
       </template>
     </v-stepper>
@@ -372,9 +87,42 @@
 <script setup>
 import { useCustomStore } from "~/store/customSettings";
 import Mark from "~/components/modules/index/Mark.vue";
+// import data
+import { useData } from "~/store/data";
+const data = useData();
+const feeds = computed(() => data.feedback || { items: [] });
 const them = useCustomStore();
-
 const shipping = ref(0);
+const type = reactive({
+  emoji: [
+    { rate: 1, icon: "😥" },
+    { rate: 2, icon: "😕" },
+    { rate: 3, icon: "😐" },
+    { rate: 4, icon: "😊" },
+    { rate: 5, icon: "😍" },
+  ],
+  tumbs: [
+    { rate: 1, icon: "👊" },
+    { rate: 2, icon: "👎" },
+    { rate: 3, icon: "👐" },
+    { rate: 4, icon: "👍" },
+    { rate: 5, icon: "👌" },
+  ],
+  stars: [
+    { rate: 1, icon: "⭐" },
+    { rate: 2, icon: "⭐" },
+    { rate: 3, icon: "⭐" },
+    { rate: 4, icon: "⭐" },
+    { rate: 5, icon: "⭐" },
+  ],
+  none: [
+    { rate: 1, icon: "خیلی ضعیف" },
+    { rate: 2, icon: "ضعیف" },
+    { rate: 3, icon: "متوسط" },
+    { rate: 4, icon: "خوب" },
+    { rate: 5, icon: "عالی" },
+  ],
+});
 const step = ref(1);
 const subtotal = computed(() =>
   products.reduce((acc, product) => acc + product.quantity * product.price, 0)
@@ -388,30 +136,19 @@ const items = [
   "تخفیفات فروشگاه",
   "پیشنهادات",
 ];
-const feedBack = ref([
-  {
-    step: 1,
-    feed: null,
-    comment: "",
+
+const feedBack = ref([]);
+
+watch(
+  () => feeds.value.items,
+  (newItems) => {
+    feedBack.value = newItems.map(() => ({
+      feed: null,
+      comment: "",
+    }));
   },
-  {
-    step: 2,
-    feed: null,
-  },
-  {
-    step: 3,
-    feed: null,
-  },
-  {
-    step: 4,
-    feed: null,
-  },
-  {
-    step: 5,
-    feed: null,
-    comment: "",
-  },
-]);
+  { immediate: true }
+);
 </script>
 
 <style scoped>

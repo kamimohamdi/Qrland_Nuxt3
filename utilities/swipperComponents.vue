@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full justify-center align-center">
-    <button ref="prevEl" class="prev_btn">
+    <button v-if="images?.length > 1" ref="prevEl" class="prev_btn">
       <v-icon size="40" color="white">mdi-chevron-left</v-icon>
     </button>
 
@@ -14,7 +14,7 @@
       :autoplay="{ delay: 15000 }"
       class="custom-swiper"
       @swiper="onSwiper"
-      @slideChange="stopVideos"
+      @slideChange="onSlideChange"
     >
       <swiper-slide
         v-for="(img, index) in props.images"
@@ -23,7 +23,7 @@
       >
         <img
           v-if="props.size.type === 'image'"
-          :src="img"
+          :src="img.url"
           alt="Slide Image"
           :style="{
             width: props.size.width,
@@ -36,18 +36,19 @@
           ref="videoRefs"
           controls
           @play="playVideo(index)"
+          @pause="onVideoPause"
           :style="{
             width: props.size.width,
             height: props.size.height,
             borderRadius: props.size.rounded,
           }"
         >
-          <source :src="img" type="video/mp4" />
+          <source :src="img.url" type="video/mp4" />
         </video>
       </swiper-slide>
     </swiper>
 
-    <button ref="nextEl" class="next_btn">
+    <button v-if="images?.length > 1" ref="nextEl" class="next_btn">
       <v-icon size="40" color="white">mdi-chevron-right</v-icon>
     </button>
   </div>
@@ -78,6 +79,9 @@ const nextEl = ref(null);
 // ریفرنس ویدیوها
 const videoRefs = ref<HTMLVideoElement[]>([]);
 
+// وضعیت پخش ویدیو
+const isVideoPlaying = ref(false);
+
 // وقتی اسلایدر آماده شد، دکمه‌های ناوبری رو مقداردهی کن
 const onSwiper = (swiper) => {
   setTimeout(() => {
@@ -90,21 +94,37 @@ const onSwiper = (swiper) => {
 
 // توقف تمام ویدیوها
 function stopVideos() {
-  videoRefs.value.forEach((video) => {
-    if (video) {
-      video.pause();
-      video.currentTime = 0; // برگرداندن ویدیو به اول
-    }
-  });
+  if (!isVideoPlaying.value) {
+    // فقط در صورتی که ویدیو در حال پخش نباشد
+    videoRefs.value.forEach((video) => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0; // برگرداندن ویدیو به اول
+      }
+    });
+  }
 }
 
 // پخش ویدیو فقط در اسلاید فعال و توقف بقیه
 function playVideo(index: number) {
+  isVideoPlaying.value = true; // ویدیو در حال پخش است
   videoRefs.value.forEach((video, i) => {
     if (i !== index && video) {
       video.pause();
     }
   });
+}
+
+// زمانی که ویدیو متوقف می‌شود
+function onVideoPause() {
+  isVideoPlaying.value = false; // ویدیو متوقف شد
+}
+
+// جلوگیری از تغییر اسلاید در حین پخش ویدیو
+function onSlideChange(swiper) {
+  if (isVideoPlaying.value) {
+    swiper.slideTo(swiper.activeIndex); // اسلاید فعلی ثابت می‌ماند
+  }
 }
 
 onMounted(() => {

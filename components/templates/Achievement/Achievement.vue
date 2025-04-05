@@ -1,13 +1,13 @@
 <template>
   <div class="w-[80%] flex flex-col">
-    <Mark title="دستاورد های مجموعه ما" />
+    <Mark :title="servieces.title" />
     <v-container>
       <v-row>
         <v-col
           cols="12"
           sm="6"
           md="3"
-          v-for="(item, index) in stats"
+          v-for="(item, index) in servieces.items"
           :key="index"
         >
           <v-card
@@ -33,7 +33,7 @@
               class="v-card__title text-center animated-number"
               :style="[`color:${them.defaultThem.textColor}`]"
             >
-              {{ animatedValues[index] }}{{ item.unit }}
+              {{ animatedValues[index] }}
             </div>
 
             <!-- توضیحات -->
@@ -44,7 +44,7 @@
                 `color:${them.defaultThem.textColor}`,
               ]"
             >
-              {{ item.title }}
+              {{ item.name }}
             </div>
           </v-card>
         </v-col>
@@ -56,38 +56,30 @@
 <script setup>
 import { useCustomStore } from "~/store/customSettings";
 import Mark from "~/components/modules/index/Mark.vue";
+// data
+import { useData } from "~/store/data";
+const data = useData();
+const servieces = data.CounterService;
+
 const them = useCustomStore();
 
-// داده‌های کارت‌ها
-const stats = ref([
-  { title: "رضایت مشتریان", value: 97, icon: "mdi-account-heart", unit: "%" },
-  {
-    title: "کمترین بازگشتی",
-    value: 5,
-    icon: "mdi-package-variant-closed",
-    unit: "%",
-  },
-  { title: "مشتری وفادار", value: 1200, icon: "mdi-crown", unit: "" },
-  { title: "سفارش ارسال‌شده", value: 560, icon: "mdi-truck-fast", unit: "" },
-]);
-
 // آرایه برای شمارش متحرک
-const animatedValues = ref(stats.value.map(() => 0));
+const animatedValues = ref(servieces.items.map(() => 0));
 
 // متد شمارش انیمیشنی
 onMounted(() => {
-  stats.value.forEach((item, index) => {
-    let step = Math.ceil(item.value / 50); // سرعت شمارش
+  servieces.items.forEach((item, index) => {
+    let step = Math.ceil(item.counter / 50); // سرعت شمارش
     let current = 0;
     let interval = setInterval(() => {
-      if (current < item.value) {
+      if (current < item.counter) {
         current += step;
-        if (current > item.value) current = item.value;
+        if (current > item.counter) current = item.counter; // اطمینان از رسیدن به مقدار دقیق
         animatedValues.value[index] = current;
       } else {
         clearInterval(interval);
       }
-    }, 30);
+    }, 30); // تاخیر به میلی‌ثانیه (می‌توانید این را تنظیم کنید)
   });
 });
 </script>
