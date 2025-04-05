@@ -41,11 +41,11 @@
                 >
               </div>
             </div>
-            <div class="flex align-center justify-center">
+            <div class="flex align-center justify-end">
               <span
-                class="m-none font-weight-bold mr-3 text-xl"
+                class="m-none text-sm mr-3"
                 :style="[`color:${them.themColor.textColor}`]"
-                >منو</span
+                >{{ data.abouts.organizationName }}</span
               >
               <v-img :src="custom.dataCustom.picture.logo" width="50px" />
             </div>

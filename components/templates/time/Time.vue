@@ -30,8 +30,9 @@
 </template>
 
 <script>
-import { defineAsyncComponent, ref } from "vue";
+import { defineAsyncComponent, ref, watch } from "vue";
 import { useCustomStore } from "~/store/customSettings";
+import { useData } from "~/store/data";
 
 export default {
   components: {
@@ -41,8 +42,46 @@ export default {
     }),
   },
   setup() {
-    const countdownTime = ref(3600); // مدت زمان شمارش معکوس به ثانیه (مثال: 1 ساعت)
+    const countdownTime = ref(0); // مدت زمان شمارش معکوس به ثانیه
     const them = useCustomStore();
+    const data = useData(); // دریافت اطلاعات از store
+
+    // محاسبه زمان باقی‌مانده
+    const calculateCountdown = () => {
+      const currentDate = new Date();
+      const targetDate = new Date(data.footer.counter.until); // زمان پایان
+      console.log("Current Date:", currentDate);
+      console.log("Target Date:", targetDate);
+
+      const diffTime = targetDate - currentDate; // تفاوت زمانی
+      console.log("Difference Time (ms):", diffTime); // زمان تفاوت به میلی‌ثانیه
+
+      // تبدیل به ثانیه
+      const seconds = Math.floor(diffTime / 1000);
+
+      // محاسبه روز، ساعت، دقیقه و ثانیه
+      const days = Math.floor(seconds / (3600 * 24)); // تعداد روزها
+      const hours = Math.floor((seconds % (3600 * 24)) / 3600); // تعداد ساعت‌ها
+      const minutes = Math.floor((seconds % 3600) / 60); // تعداد دقیقه‌ها
+      const finalSeconds = seconds % 60; // تعداد ثانیه‌ها
+
+      // نمایش به صورت کلی
+      countdownTime.value = {
+        days,
+        hours,
+        minutes,
+        finalSeconds,
+      };
+    };
+
+    // نظارت بر تغییرات در داده‌های `counter.until`
+    watch(
+      () => data.footer.counter.until,
+      () => {
+        calculateCountdown();
+      },
+      { immediate: true } // محاسبه اولیه به محض بارگذاری
+    );
 
     const onFinish = () => {
       alert("شمارش معکوس به پایان رسید!");

@@ -15,11 +15,15 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "@nuxt/ui",
     "@pinia/nuxt",
+    "nuxt-maplibre",
   ],
   vite: {
     plugins: [tailwindcss()],
   },
   build: {
     transpile: ["vuetify"],
+  },
+  maplibre: {
+    style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json", // URL برای استایل نقشه
   },
 });

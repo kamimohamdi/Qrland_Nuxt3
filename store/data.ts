@@ -9,6 +9,39 @@ export const useData = defineStore("data", () => {
   const feedback = datas.FeedBack;
   const CounterService = datas.CounterService;
   const services = datas.service;
+  const footer = {
+    workSheets: datas.WorkSheet,
+    phoneNumber: datas.phoneNumber,
+    companyNumber: datas.companyNumber,
+    email: datas.email,
+    location: datas.location,
+    address: datas.address,
+    city: datas.city,
+    codePstal: datas.codePostal,
+    website: datas.website,
+    media: datas.socialMedia,
+    blog: datas.blog,
+    fax: datas.fax,
+    about: datas.aboutUs,
+    copyright: datas.copyright,
+    counter: datas.Counter,
+  };
+  const abouts = {
+    organizationName: datas.organizationName,
+    subOrgan: datas.subOrgan,
+    userName: datas.userName,
+    workField: datas.workField,
+  };
 
-  return { datas, banner, gallery, videos, feedback, CounterService, services };
+  return {
+    datas,
+    banner,
+    gallery,
+    videos,
+    feedback,
+    CounterService,
+    services,
+    footer,
+    abouts,
+  };
 });

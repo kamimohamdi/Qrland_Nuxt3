@@ -1,5 +1,5 @@
 <template>
-  <div class="relative my-3 w-full flex justify-center align-center">
+  <div dir="rtl" class="relative my-3 w-full flex justify-center align-center">
     <span
       class="w-[50px] h-0.5 absolute bottom-[-5px] rounded-xl"
       :style="{ background: them.defaultThem.componentsColor }"

@@ -54,7 +54,6 @@
       </v-col>
     </v-row>
   </v-container>
-  >>>>>>> f136c40c67674b38efa2afad26bbbaacb83e28b0
 </template>
 
 <script setup>

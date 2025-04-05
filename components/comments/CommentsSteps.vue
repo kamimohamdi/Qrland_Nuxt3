@@ -1,11 +1,13 @@
 <template>
-  <div class="w-[80%] flex my-2 flex-col">
+  <div class="w-[80%] flex my-4 p-0 flex-col">
     <Mark :title="feeds.description" />
     <v-stepper
       v-model="step"
       :style="[
         'box-shadow: none',
         `backgroundd:${them.defaultThem.componentsColor}`,
+        'width:100%',
+        'padding:0',
       ]"
       :items="items"
       dir="rtl"
@@ -29,7 +31,7 @@
         :key="i"
         v-slot:[`item.${i+1}`]
       >
-        <h2 class="text-sm">{{ question.question }}</h2>
+        <h2 class="text-sm" dir="rtl">{{ question.question }}</h2>
         <div class="my-3" dir="rtl" v-if="question.value">
           <v-textarea
             v-model="feedBack[i].comment"
@@ -43,26 +45,24 @@
             :rules="[(v) => v.length > 3 || 'باید حداقل ۳ کارکتر را وارد کنید']"
           />
         </div>
-        <div class="h-14 w-full flex justify-center align-center">
+        <div class="h-14 w-[100%] flex justify-center align-center">
           <v-btn
             v-for="(emoji, rate) in type[
               question.type ? question.type : 'none'
             ]"
             :key="rate"
             class="text-h4"
+            v-if="question.type"
+            max-width="50px"
             :style="[
               'box-shadow: none',
-              'with: 50px',
-              ' height: 50px',
+              'height: 50px',
+              'padding:0 ',
               `filter:${
                 feedBack[i].feed == rate + 1 ? 'none' : 'grayscale(100%)'
               }`,
             ]"
-            v-if="question.type"
-            @click="
-              feedBack[i].feed = rate + 1;
-              alert('ok');
-            "
+            @click="feedBack[i].feed = rate + 1"
           >
             {{ emoji.icon }}
           </v-btn>
@@ -166,5 +166,9 @@ watch(
 
 ::v-deep .v-stepper-header {
   display: none !important;
+}
+
+::v-deep .v-stepper-window {
+  margin: 0.1rem !important;
 }
 </style>

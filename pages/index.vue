@@ -6,6 +6,9 @@ import Achievement from "~/components/templates/Achievement/Achievement.vue";
 import Time from "~/components/templates/time/Time.vue";
 import Footer from "~/components/templates/footer/Footer.vue";
 
+// const router = useRouter();
+// console.log(router);
+
 definePageMeta({
   layout: "first",
 });

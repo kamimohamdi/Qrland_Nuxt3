@@ -325,7 +325,10 @@ export const data = {
                   start: "08:00",
                   end: "17:00",
                 },
-                {},
+                {
+                  start: "17:00",
+                  end: "23:00",
+                },
               ],
               start: "08:00:00",
               end: "22:00:00",
@@ -367,7 +370,7 @@ export const data = {
         Counter: {
           title: "حالا در آینده زندگی کنید...",
           description: "خبرهای خوبی برایتان داریم.",
-          until: "2023-08-23 00:00:00",
+          until: "2025-12-23 00:00:00",
           type: "countdown_2",
         },
         visitName: "صفحه کاری کیوآر لند",
