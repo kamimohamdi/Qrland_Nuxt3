@@ -1,42 +1,44 @@
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12" md="4" v-for="(item, index) in features" :key="index">
-        <v-card
-          class="feature-card"
-          :color="them.defaultThem.componentsColor"
-          elevation="10"
-          style="box-shadow: none"
-        >
-          <div
-            class="d-flex flex-column align-center justify-center text-center"
+  <div class="w-full">
+    <v-container>
+      <v-row dense>
+        <v-col cols="12" md="4" v-for="(item, index) in features" :key="index">
+          <v-card
+            class="feature-card"
+            :color="them.defaultThem.componentsColor"
+            elevation="10"
+            style="box-shadow: none"
           >
-            <!-- آواتار با انیمیشن -->
-            <v-avatar class="ma-3 animated-avatar" rounded="lg" size="70">
-              <v-icon
-                :color="them.defaultThem.iconColor"
-                size="50"
-                class="animated-icon"
-                >{{ item.icon }}</v-icon
-              >
-            </v-avatar>
+            <div
+              class="d-flex flex-column align-center justify-center text-center"
+            >
+              <!-- آواتار با انیمیشن -->
+              <v-avatar class="ma-3 animated-avatar" rounded="lg" size="70">
+                <v-icon
+                  :color="them.defaultThem.iconColor"
+                  size="50"
+                  class="animated-icon"
+                  >{{ item.icon }}</v-icon
+                >
+              </v-avatar>
 
-            <!-- عنوان و توضیحات -->
-            <v-card-title
-              :color="them.defaultThem.textColor"
-              class="text-h6 font-bold"
-              >{{ item.title }}</v-card-title
-            >
-            <v-card-subtitle
-              :color="them.defaultThem.textColor"
-              class="text-subtitle-1"
-              >{{ item.subtitle }}</v-card-subtitle
-            >
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+              <!-- عنوان و توضیحات -->
+              <v-card-title
+                :color="them.defaultThem.textColor"
+                class="text-h6 font-bold"
+                >{{ item.title }}</v-card-title
+              >
+              <v-card-subtitle
+                :color="them.defaultThem.textColor"
+                class="text-subtitle-1"
+                >{{ item.subtitle }}</v-card-subtitle
+              >
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script setup lang="ts">
