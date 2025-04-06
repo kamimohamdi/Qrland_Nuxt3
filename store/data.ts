@@ -25,6 +25,7 @@ export const useData = defineStore("data", () => {
     about: datas.aboutUs,
     copyright: datas.copyright,
     counter: datas.Counter,
+    locationMap: datas.center,
   };
   const abouts = {
     organizationName: datas.organizationName,

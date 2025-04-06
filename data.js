@@ -20,7 +20,7 @@ export const data = {
                   name: "6",
                   title: "سامانه بزرگ کیوآر لند",
                   url: "https://robot-api.terminalads.com/upload/6496a552a8435.jpg",
-                  description: "",
+                  description: "بزرگترین",
                   link: "qrland.ir",
                   id: 10278,
                 },

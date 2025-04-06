@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[60vh] w-full flex my-14 justify-center align-center relative flex-col"
+    class="h-[60vh] w-[100%] flex my-14 justify-center align-center relative flex-col"
   >
     <div class="relative my-3 w-full flex justify-center align-center">
       <span
@@ -25,15 +25,17 @@
 
       <v-tabs-window v-model="tabs">
         <v-tabs-window-item v-for="(item, i) in gallery" :key="i" :value="i">
-          <swipperComponents
-            :images="item.images"
-            :size="{
-              height: '60vh',
-              width: '80%',
-              rounded: '15px',
-              type: 'image',
-            }"
-          />
+          <div class="w-[80%] flex justify-center align-center">
+            <swipperComponents
+              :images="item.images"
+              :size="{
+                height: '60vh',
+                width: '100%',
+                rounded: '15px',
+                type: 'image',
+              }"
+            />
+          </div>
         </v-tabs-window-item>
       </v-tabs-window>
     </div>

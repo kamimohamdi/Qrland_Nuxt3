@@ -3,6 +3,8 @@ import { useCustomStore } from "~/store/customSettings";
 import Modal from "~/utilities/Modal.vue";
 import { useData } from "~/store/data";
 import Shift from "../time/Shift.vue";
+import MapLibre from "~/utilities/MapLibre.vue";
+import Map from "~/utilities/Map.vue";
 
 const latitude = ref(35.6895); // عرض جغرافیایی
 const longitude = ref(51.389); // طول جغرافیایی
@@ -13,6 +15,14 @@ const { footer, abouts } = useData();
 const them = useCustomStore();
 const medias = ref([]);
 const value = ref(false);
+
+const mapModal = ref({
+  close: true,
+  check: false,
+  subtitle: "با کلیک بر روی دکمه وارد مسیر یاب شوید",
+  button: null,
+  title: "آدرس مراجعه حضوری",
+});
 
 const getMedia = () => {
   Object.keys(footer.media).map((item, index) =>
@@ -186,10 +196,25 @@ onMounted(async () => {
     >
       <p v-html="footer.copyright"></p>
     </div>
-    <Modal v-model:value="value" max-height="500px" @submit="co">
+    <Modal
+      v-model:value="value"
+      max-height="700px"
+      @submit="co"
+      :custom-object="mapModal"
+    >
       <template #default>
         <div>
-          <MapLibre :latitude="latitude" :longitude="longitude" :zoom="zoom" />
+          <MapLibre
+            :latitude="35.6895"
+            :longitude="51.389"
+            :zoom="12"
+            :pitch="30"
+            :bearing="90"
+            :location="{
+              latitude: footer.locationMap[1],
+              longitude: footer.locationMap[0],
+            }"
+          />
         </div>
       </template>
     </Modal>

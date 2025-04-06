@@ -2,14 +2,14 @@
   <v-dialog v-model="dialog" :max-height="maxHeight" :min-height="minHeight">
     <v-card>
       <v-card-title
-        class="d-flex align-center px-4 flex-row-reverse h-16 border justify-between"
+        class="d-flex align-center px-4 flex-row-reverse h-18 border justify-between"
       >
         <span
           :class="`flex ${
             props.customObject.subtitle?.length > 0 ? 'flex-col' : ''
-          } justify-center align-center my-2`"
+          } justify-start align-end my-2`"
         >
-          <v-card-title>gg</v-card-title>
+          <v-card-title>{{ props.customObject.title }}</v-card-title>
           <v-card-subtitle v-if="props.customObject.subtitle">{{
             props.customObject.subtitle
           }}</v-card-subtitle>
@@ -84,6 +84,7 @@ const props = withDefaults(
     customObject?: {
       close: boolean;
       check: boolean;
+      title: string;
       subtitle: string | null;
       button: {
         icon: string;
