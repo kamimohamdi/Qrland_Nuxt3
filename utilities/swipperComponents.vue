@@ -9,12 +9,14 @@
       :slides-per-view="1"
       :space-between="10"
       :loop="true"
-      :pagination="{ clickable: true }"
+      :pagination="false"
       :navigation="{ prevEl: prevEl, nextEl: nextEl }"
-      :autoplay="{ delay: 15000 }"
+      :autoplay="{
+        delay: 5000,
+        disableOnInteraction: props.size.type === 'video' ? true : false,
+      }"
       class="custom-swiper"
       @swiper="onSwiper"
-      @slideChange="onSlideChange"
     >
       <swiper-slide
         v-for="(img, index) in props.images"
@@ -32,26 +34,32 @@
             borderRadius: props.size.rounded,
           }"
         />
-        <video
+        <iframe
           v-else
-          ref="videoRefs"
-          controls
-          @play="playVideo(index)"
-          @pause="onVideoPause"
+          :src="img.url"
+          ref="video"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
           :style="{
             width: props.size.width,
-            height: props.size.height,
+            minHeight: props.size.height,
             borderRadius: props.size.rounded,
           }"
-        >
-          <source :src="img.url" type="video/mp4" />
-        </video>
+        />
         <div
           v-if="img.title && props.size.type === 'image'"
           class="titleSwiper"
         >
           <h1 class="text-xl">{{ img.title }}</h1>
           <h3>{{ img.description }}</h3>
+        </div>
+        <div
+          v-if="img.title && props.size.type === 'video'"
+          class="absolute top-[5%] right-[5%] w-auto rounded-xl text-white px-2 py-2 h-6 bg-slate-500"
+          :style="{ background: data.defaultThem.componentsColor }"
+        >
+          {{ img.title }}
         </div>
       </swiper-slide>
     </swiper>
@@ -68,6 +76,9 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useCustomStore } from "~/store/customSettings";
+const data = useCustomStore();
+const video = ref(null);
 
 const props = defineProps<{
   images: string[];
@@ -79,15 +90,25 @@ const props = defineProps<{
   };
 }>();
 
+const changevideo = (e) => {
+  console.log(e);
+};
+
 // دکمه‌های قبلی و بعدی
 const prevEl = ref(null);
 const nextEl = ref(null);
 
 // ریفرنس ویدیوها
-const videoRefs = ref<HTMLVideoElement[]>([]);
+const videoRefs = ref<HTMLIFrameElement[]>([]);
 
 // وضعیت پخش ویدیو
 const isVideoPlaying = ref(false);
+
+// تنظیمات autoplay برای جلوگیری از تغییر اسلاید در هنگام پخش ویدیو
+const autoplayConfig = ref({
+  delay: 15000,
+  disableOnInteraction: false, // جلوگیری از توقف autoplay هنگام تعامل
+});
 
 // وقتی اسلایدر آماده شد، دکمه‌های ناوبری رو مقداردهی کن
 const onSwiper = (swiper) => {
@@ -105,8 +126,7 @@ function stopVideos() {
     // فقط در صورتی که ویدیو در حال پخش نباشد
     videoRefs.value.forEach((video) => {
       if (video) {
-        video.pause();
-        video.currentTime = 0; // برگرداندن ویدیو به اول
+        video.src = ""; // متوقف کردن ویدیو
       }
     });
   }
@@ -115,9 +135,13 @@ function stopVideos() {
 // پخش ویدیو فقط در اسلاید فعال و توقف بقیه
 function playVideo(index: number) {
   isVideoPlaying.value = true; // ویدیو در حال پخش است
+  autoplayConfig.value = {
+    ...autoplayConfig.value,
+    disableOnInteraction: true,
+  }; // غیرفعال کردن autoplay
   videoRefs.value.forEach((video, i) => {
     if (i !== index && video) {
-      video.pause();
+      video.src = ""; // ویدیوهای دیگر متوقف می‌شود
     }
   });
 }
@@ -125,6 +149,10 @@ function playVideo(index: number) {
 // زمانی که ویدیو متوقف می‌شود
 function onVideoPause() {
   isVideoPlaying.value = false; // ویدیو متوقف شد
+  autoplayConfig.value = {
+    ...autoplayConfig.value,
+    disableOnInteraction: false,
+  }; // فعال کردن autoplay دوباره
 }
 
 // جلوگیری از تغییر اسلاید در حین پخش ویدیو
@@ -152,7 +180,7 @@ onMounted(() => {
 .prev_btn,
 .next_btn {
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -217,11 +245,12 @@ onMounted(() => {
   transform: translateY(0);
 }
 .v-window-item {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
 }
+
 .v-tabs-window-item {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
 }
 </style>

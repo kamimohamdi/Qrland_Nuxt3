@@ -1,11 +1,12 @@
 <template>
+  <Mark title="خدمات" />
   <v-container>
     <v-row dense>
       <v-col cols="12" md="4" v-for="(item, index) in services" :key="index">
         <v-card
           v-if="item.image?.length"
           class="rounded-lg overflow-hidden card-container"
-          elevation="0"
+          elevation="10"
         >
           <v-responsive aspect-ratio="16/9">
             <div class="b-service-background">
@@ -61,11 +62,12 @@ import { useCustomStore } from "~/store/customSettings";
 import { useData } from "~/store/data";
 const { services } = useData();
 const them = useCustomStore();
+import Mark from "../modules/index/Mark.vue";
 </script>
 
 <style scoped>
 .card-container {
-  height: 100%;
+  height: 78%;
   transition: 0.3s ease-out;
 }
 .b-service-background {

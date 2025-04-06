@@ -12,9 +12,9 @@
             'border-radius: 20px',
             'top: none',
             'left: none',
-            'opacity:.7',
+            'opacity:.8',
             'width:100%',
-            'z-index:999',
+            'z-index:9999',
           ]"
         >
           <div class="w-full flex justify-between align-center px-3">
@@ -34,11 +34,13 @@
                     <v-icon v-else size="32">mdi-weather-sunny</v-icon>
                   </template>
                 </v-switch>
-                <span
-                  class="w-52 h-10 text-bold cursor-pointer flex justify-center align-center shadow-xl rounded-2xl ml-4 border"
+                <div
+                  class="w-12 md:w-52 h-10 text-bold cursor-pointer flex justify-center align-center shadow-xl rounded-2xl ml-4 border"
                   @click="search = !search"
-                  >جستجو در محصولات</span
                 >
+                  <span class="hidden md:flex mr-2">جستجو در محصولات</span>
+                  <v-icon class="d-md-hidden">mdi-magnify</v-icon>
+                </div>
               </div>
             </div>
             <div class="flex align-center justify-end">
@@ -55,14 +57,15 @@
           :color="them.themColor.componentsColor"
           class="flex"
           :style="[
-            search ? 'max-width: 80%' : 'max-width:0%',
+            search ? 'max-width: 90%' : 'max-width:0%',
             'display: flex',
             'border-radius: 20px',
             'top: 35%',
             'left: none',
-            'opacity:.9',
+            'opacity:.95',
             'align-items:center',
             'width:100%',
+            'z-index:99999',
           ]"
           :height="150"
         >

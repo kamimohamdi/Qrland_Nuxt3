@@ -1,12 +1,16 @@
 export const data = {
   status: true,
-  message: "اطلاعات موردنظر با موفقیت دریافت شدند.",
+  message:
+    "\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0645\u0648\u0631\u062f\u0646\u0638\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u062f\u0631\u06cc\u0627\u0641\u062a \u0634\u062f\u0646\u062f.",
   data: {
+    id: 476074,
     user_id: 17,
-    title: "صفحه کاری کیوآر لند",
     domain_id: 1,
+    clicks: 1,
+    title: "\u06a9\u0627\u0645\u06cc\u0647",
     type: "Business",
-    identifier: "i0005",
+    image: "67f2437364117.svg",
+    identifier: "i0006",
     data: {
       theme: "",
       data: {
@@ -18,9 +22,10 @@ export const data = {
               images: [
                 {
                   name: "6",
-                  title: "سامانه بزرگ کیوآر لند",
+                  title:
+                    "\u0633\u0627\u0645\u0627\u0646\u0647 \u0628\u0632\u0631\u06af \u06a9\u06cc\u0648\u0622\u0631 \u0644\u0646\u062f",
                   url: "https://robot-api.terminalads.com/upload/6496a552a8435.jpg",
-                  description: "بزرگترین",
+                  description: "",
                   link: "qrland.ir",
                   id: 10278,
                 },
@@ -32,12 +37,22 @@ export const data = {
                   link: "",
                   id: 10279,
                 },
+                {
+                  name: "Jesus_Christ_in_Tehran",
+                  title:
+                    "\u06cc\u0627 \u0639\u06cc\u0633\u06cc \u0645\u0633\u06cc\u062d",
+                  url: "https://cdn.terminalads.com/upload/67c30c8560616.",
+                  description:
+                    "\u062a\u0648\u0631 \u0628\u0647 \u0628\u0648\u0627\u0644\u0641\u0636\u0644",
+                  link: "",
+                  id: 1148042,
+                },
               ],
             },
           ],
         },
         Product: {
-          title: "محصولات",
+          title: "\u0645\u062d\u0635\u0648\u0644\u0627\u062a",
           description: "",
           sectionColor: {
             backGround: "linear-gradient(to right , #350808, #1C107CFF)",
@@ -47,7 +62,7 @@ export const data = {
         },
         blog: [
           {
-            title: "پست 1",
+            title: "\u067e\u0633\u062a 1",
             content: "",
             gallery: [
               {
@@ -62,9 +77,7 @@ export const data = {
         service: [
           {
             title: "\u067e\u0633\u062a 1",
-            content:
-              "\u0627\u0631\u0633\u0627\u0644 \u0633\u0631\u06cc\u0639 \u0633\u0641\u0627\u0631\u0634",
-            icon: "mdi-truck-fast",
+            content: "",
             gallery: [
               {
                 name: "",
@@ -72,12 +85,13 @@ export const data = {
               },
             ],
             color: null,
+            icon: null,
           },
           {
             title: "\u067e\u0633\u062a 2",
             content:
-              "\u0627\u0645\u06a9\u0627\u0646 \u067e\u0631\u062f\u0627\u062e\u062a \u062f\u0631 \u0645\u062d\u0644",
-            icon: "mdi-account-credit-card",
+              "\u0628\u06cc\u0634\u062a\u0631\u06cc\u0646 \u0645\u062e\u0627\u0637\u0628",
+            icon: "mdi-account-box",
             gallery: [
               {
                 name: "",
@@ -88,35 +102,24 @@ export const data = {
           },
           {
             title: "\u067e\u0633\u062a 3",
-            content:
-              "\u0636\u0645\u0627\u0646\u062a \u0627\u0635\u0627\u0644\u062a \u06a9\u0627\u0644\u0627",
-            icon: "mdi-shield-check",
-            gallery: [
-              {
-                name: "",
-                images: [],
-              },
-            ],
-            color: null,
-          },
-          {
-            title: "\u067e\u0633\u062a 4",
-            content: "\u0627\u0631\u0633\u0627\u0644",
-            image: "https://cdn.terminalads.com/upload/67c312975e084.",
+            content: "\u0638\u0647\u0648\u0631 \u0645\u0633\u06cc\u062d",
+            image: "https://cdn.terminalads.com/upload/67c2bdd567361.",
           },
         ],
         video_gallery: [
           {
-            name: "تبلیغاتی",
+            name: "\u062a\u0628\u0644\u06cc\u063a\u0627\u062a\u06cc",
             images: [
               {
-                title: "تریلر کیوآر داینامیک",
-                url: "https://persian17.cdn.asset.aparat.com/aparat-video/607aa7d5aaf038269ab8e74d6dc472d263936538-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6Ijk1NTdkNTA0YzUxYmY1NDhiZDkzNWUyY2Y3Y2Q1NjFhIiwiZXhwIjoxNzQzNzk0NzI1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.QgOnGlKYWgBcHQNJBh74IZl4gDx9-LE_8LO3yjlGPIo",
+                title:
+                  "\u062a\u0631\u06cc\u0644\u0631 \u06a9\u06cc\u0648\u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9",
+                url: "https://www.aparat.com/video/video/embed/videohash/DZUuA/vt/frame",
                 description: "",
                 link: "",
               },
               {
-                title: "کارت ویزیت الکترونیکی",
+                title:
+                  "\u06a9\u0627\u0631\u062a \u0648\u06cc\u0632\u06cc\u062a \u0627\u0644\u06a9\u062a\u0631\u0648\u0646\u06cc\u06a9\u06cc",
                 url: "https://www.aparat.com/video/video/embed/videohash/NnK26/vt/frame",
                 description: "",
                 link: "",
@@ -124,48 +127,86 @@ export const data = {
             ],
           },
           {
-            name: "آموزشی",
+            name: "\u0622\u0645\u0648\u0632\u0634\u06cc",
             images: [
               {
-                title: "ثبت نام در سامانه کیوآر لند",
+                title:
+                  "\u062b\u0628\u062a \u0646\u0627\u0645 \u062f\u0631 \u0633\u0627\u0645\u0627\u0646\u0647 \u06a9\u06cc\u0648\u0622\u0631 \u0644\u0646\u062f",
                 url: "https://www.aparat.com/video/video/embed/videohash/UY4KN/vt/frame",
                 description: "",
                 link: "core.terminalads.com",
               },
               {
-                title: "ساخت کارت ویزیت الکترونیکی",
+                title:
+                  "\u0633\u0627\u062e\u062a \u06a9\u0627\u0631\u062a \u0648\u06cc\u0632\u06cc\u062a \u0627\u0644\u06a9\u062a\u0631\u0648\u0646\u06cc\u06a9\u06cc",
                 url: "https://www.aparat.com/video/video/embed/videohash/qoD2r/vt/frame",
                 description: "",
                 link: "",
               },
               {
-                title: "لیست کیوآرهای من",
+                title:
+                  "\u0644\u06cc\u0633\u062a \u06a9\u06cc\u0648\u0622\u0631\u0647\u0627\u06cc \u0645\u0646",
                 url: "https://www.aparat.com/video/video/embed/videohash/xq9rz/vt/frame",
                 description: "",
                 link: "",
               },
               {
-                title: "آمار بازدید کیوآرکدهای داینامیک",
+                title:
+                  "\u0622\u0645\u0627\u0631 \u0628\u0627\u0632\u062f\u06cc\u062f \u06a9\u06cc\u0648\u0622\u0631\u06a9\u062f\u0647\u0627\u06cc \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9",
                 url: "https://www.aparat.com/video/video/embed/videohash/AyczW/vt/frame",
                 description: "",
                 link: "",
               },
               {
-                title: "آپلودسنتر کیوآرلند",
+                title:
+                  "\u0622\u067e\u0644\u0648\u062f\u0633\u0646\u062a\u0631 \u06a9\u06cc\u0648\u0622\u0631\u0644\u0646\u062f",
                 url: "https://www.aparat.com/video/video/embed/videohash/FJZ1S/vt/frame",
                 description: "",
                 link: "",
               },
             ],
           },
+          {
+            name: "\u06af\u0627\u0644\u0631\u06cc 2",
+            images: [
+              {
+                name: "\u0644\u0648\u0644\u0647 \u0628\u0627\u0632\u06a9\u0646\u06cc",
+                title: "",
+                file_link:
+                  "https://caspian10.asset.aparat.com/aparat-video/6502332027386e1991022d3ba3fedc9f52700764-1080p.apt?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImE4NjYwYThlZDljYzA5NzI1OWM2ZmUzMzhkMTBkNWQ0IiwiZXhwIjoxNzQzOTYxOTkyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.-Cx3w8jm6cSxSJaiB1bgDS_NpF6wiYEDbU8vBAu-2jw",
+                description: "",
+                link: "",
+                id: 18,
+              },
+              {
+                name: "\u0628\u0627\u0631\u0628\u0631\u06cc / \u0627\u062b\u0627\u062b \u06a9\u0634\u06cc",
+                title: "",
+                file_link:
+                  "https://persian8.asset.aparat.com/aparat-video/2b8e8a1fa308948840d5b521ab4134de52747408-1080p.apt?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImJmOTg3YTg5ZDhkMzkwZWM0YTM3YzAxZGJlMTRmYzMwIiwiZXhwIjoxNzQzOTYxOTkwLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.PmvSWtYllrFUV_JEoAngfNf6esctPiHrkUElY2RWems",
+                description: "",
+                link: "",
+                id: 17,
+              },
+              {
+                name: "\u0639\u0631\u0648\u0633\u06a9",
+                title: "",
+                file_link:
+                  "https://caspian7.asset.aparat.com/aparat-video/2b688e5111844f164968b3ff7d4a51f452692657-1080p.apt?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImI0MGQ1MjViYjI2YjJmZTI2OGJmZmY0YWNkZjQwOGJlIiwiZXhwIjoxNzQzOTYxOTk1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.itSTLezAYe1QsOwZe74bULH17EMbpe8Ti91ci-6Kvks",
+                description: "",
+                link: "",
+                id: 19,
+              },
+            ],
+          },
         ],
         gallery: [
           {
-            name: "کیوآر داینامیک",
+            name: "\u06a9\u06cc\u0648\u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9",
             images: [
               {
                 name: "18",
-                title: "اسکن ساده و آسان",
+                title:
+                  "\u0627\u0633\u06a9\u0646 \u0633\u0627\u062f\u0647 \u0648 \u0622\u0633\u0627\u0646",
                 url: "https://robot-api.terminalads.com/upload/64b1534cd75db.jpg",
                 description: "",
                 link: "",
@@ -173,7 +214,8 @@ export const data = {
               },
               {
                 name: "8",
-                title: "یک دنیا اطلاعات را در یک کیوآر جای دهید",
+                title:
+                  "\u06cc\u06a9 \u062f\u0646\u06cc\u0627 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0631\u0627 \u062f\u0631 \u06cc\u06a9 \u06a9\u06cc\u0648\u0622\u0631 \u062c\u0627\u06cc \u062f\u0647\u06cc\u062f",
                 url: "https://robot-api.terminalads.com/upload/64b1535578ce0.jpg",
                 description: "",
                 link: "",
@@ -181,7 +223,8 @@ export const data = {
               },
               {
                 name: "10",
-                title: "قابلیت رمز گذاری",
+                title:
+                  "\u0642\u0627\u0628\u0644\u06cc\u062a \u0631\u0645\u0632 \u06af\u0630\u0627\u0631\u06cc",
                 url: "https://robot-api.terminalads.com/upload/64b1535a61377.jpg",
                 description: "",
                 link: "",
@@ -189,7 +232,8 @@ export const data = {
               },
               {
                 name: "11",
-                title: "امکان پرداخت و تسویه",
+                title:
+                  "\u0627\u0645\u06a9\u0627\u0646 \u067e\u0631\u062f\u0627\u062e\u062a \u0648 \u062a\u0633\u0648\u06cc\u0647",
                 url: "https://robot-api.terminalads.com/upload/64b1535f01a1a.jpg",
                 description: "",
                 link: "",
@@ -198,7 +242,7 @@ export const data = {
             ],
           },
           {
-            name: "کیوآر کد",
+            name: "\u06a9\u06cc\u0648\u0622\u0631 \u06a9\u062f",
             images: [
               {
                 name: "12",
@@ -231,7 +275,8 @@ export const data = {
         gallerySlider: false,
         isGradient: false,
         consultation: {
-          title: "فرم درخواست",
+          title:
+            "\u0641\u0631\u0645 \u062f\u0631\u062e\u0648\u0627\u0633\u062a",
           description: "",
           sectionColor: {
             backGround: "",
@@ -239,46 +284,48 @@ export const data = {
           },
           items: {
             name: {
-              is_active: false,
+              is_active: true,
               type: "optional",
               value: "",
               format: "text",
-              persian: "نام",
+              persian: "\u0646\u0627\u0645",
             },
             surname: {
-              is_active: false,
-              type: "optional",
+              is_active: true,
+              type: "require",
               value: "",
               format: "text",
-              persian: "نام خانوادگی",
+              persian:
+                "\u0646\u0627\u0645 \u062e\u0627\u0646\u0648\u0627\u062f\u06af\u06cc",
             },
             phone: {
-              is_active: false,
+              is_active: true,
               type: "optional",
               value: "",
               format: "number",
-              persian: "شماره موبایل",
+              persian:
+                "\u0634\u0645\u0627\u0631\u0647 \u0645\u0648\u0628\u0627\u06cc\u0644",
             },
             mail: {
-              is_active: false,
+              is_active: true,
               type: "optional",
               value: "",
               format: "text",
-              persian: "ایمیل",
+              persian: "\u0627\u06cc\u0645\u06cc\u0644",
             },
             address: {
-              is_active: false,
+              is_active: true,
               type: "optional",
               value: "",
               format: "text",
-              persian: "آدرس",
+              persian: "\u0622\u062f\u0631\u0633",
             },
             nationalId: {
-              is_active: false,
-              type: "optional",
+              is_active: true,
+              type: "require",
               value: "",
               format: "number",
-              persian: "کدملی",
+              persian: "\u06a9\u062f\u0645\u0644\u06cc",
               verify: "correct",
             },
             location: {
@@ -286,10 +333,10 @@ export const data = {
               type: "optional",
               value: "",
               format: "text",
-              persian: "لوکیشن",
+              persian: "\u0644\u0648\u06a9\u06cc\u0634\u0646",
             },
             custom: {
-              is_active: false,
+              is_active: true,
               type: "optional",
               value: "",
               format: "select",
@@ -299,85 +346,127 @@ export const data = {
               },
             },
             description: {
-              is_active: false,
-              type: "optional",
+              is_active: true,
+              type: "require",
               value: "",
               format: "text",
-              persian: "توضیحات",
+              persian: "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a",
             },
           },
         },
         Personnel: {
-          title: "تیم ما",
+          title: "\u062a\u06cc\u0645 \u0645\u0627",
           description: "",
           sectionColor: {
             backGround: "linear-gradient(to right , #350808, #1C107CFF)",
             text: "#fff",
           },
-          items: [],
+          items: [
+            {
+              position:
+                "\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06cc\u0633",
+              phone: "\u0634\u0645\u0627\u0631\u0647 \u062a\u0645\u0627\u0633",
+              full_name: "\u0627\u0645\u06cc\u0631",
+              description:
+                "\u0644\u0648\u0631\u0645 \u0627\u06cc\u067e\u0633\u0648\u0645 \u0645\u062a\u0646 \u0633\u0627\u062e\u062a\u06af\u06cc \u0628\u0627 \u062a\u0648\u0644\u06cc\u062f \u0633\u0627\u062f\u06af\u06cc \u0646\u0627\u0645\u0641\u0647\u0648\u0645 \u0627\u0632 \u0635\u0646\u0639\u062a \u0686\u0627\u067e \u0648 \u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0637\u0631\u0627\u062d\u0627\u0646 \u06af\u0631\u0627\u0641\u06cc\u06a9 \u0627\u0633\u062a",
+              image: [
+                {
+                  name: "",
+                  images: [
+                    {
+                      name: "Jesus_Christ_in_the_Cradle",
+                      title: "",
+                      url: "https://cdn.terminalads.com/upload/67c2bbfdb31ad.",
+                      description: "",
+                      link: "",
+                      id: 1148034,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
         WorkSheet: {
           items: {
             saturday: {
-              name: "شنبه",
+              name: "\u0634\u0646\u0628\u0647",
               shift: [
                 {
-                  start: "08:00",
-                  end: "17:00",
+                  start: "",
+                  end: "",
                 },
                 {
-                  start: "17:00",
-                  end: "23:00",
+                  start: "",
+                  end: "",
                 },
               ],
-              start: "08:00:00",
-              end: "22:00:00",
+              start: "08:00",
+              end: "22:00",
             },
             sunday: {
-              name: "یکشنبه",
+              name: "\u06cc\u06a9\u0634\u0646\u0628\u0647",
               shift: [
                 {
-                  start: "08:00",
-                  end: "17:00",
+                  start: "",
+                  end: "",
                 },
-                {},
+                {
+                  start: "",
+                  end: "",
+                },
               ],
-              start: "08:00:00",
-              end: "22:00:00",
+              start: "08:00",
+              end: "22:00",
             },
             monday: {
-              name: "دوشنبه",
+              name: "\u062f\u0648\u0634\u0646\u0628\u0647",
               shift: [{}, {}],
             },
             tuesday: {
-              name: "سه‌شنبه",
+              name: "\u0633\u0647\u200c\u0634\u0646\u0628\u0647",
               shift: [{}, {}],
             },
             wednesday: {
-              name: "چهارشنبه",
+              name: "\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647",
               shift: [{}, {}],
             },
             thursday: {
-              name: "پنجشنبه",
-              shift: [{}, {}],
+              name: "\u067e\u0646\u062c\u0634\u0646\u0628\u0647",
+              shift: [
+                {
+                  start: "00:11",
+                  end: "12:30",
+                },
+                {
+                  start: "",
+                  end: "",
+                },
+              ],
+              start: "08:00",
+              end: "22:00",
             },
             friday: {
-              name: "جمعه",
+              name: "\u062c\u0645\u0639\u0647",
               shift: [{}, {}],
             },
           },
         },
         Counter: {
-          title: "حالا در آینده زندگی کنید...",
-          description: "خبرهای خوبی برایتان داریم.",
-          until: "2025-12-23 00:00:00",
+          title:
+            "\u062d\u0627\u0644\u0627 \u062f\u0631 \u0622\u06cc\u0646\u062f\u0647 \u0632\u0646\u062f\u06af\u06cc \u06a9\u0646\u06cc\u062f...",
+          description:
+            "\u062e\u0628\u0631\u0647\u0627\u06cc \u062e\u0648\u0628\u06cc \u0628\u0631\u0627\u06cc\u062a\u0627\u0646 \u062f\u0627\u0631\u06cc\u0645.",
+          until: "2025-04-09 12:32:00",
           type: "countdown_2",
         },
-        visitName: "صفحه کاری کیوآر لند",
-        organizationName: "سامانه بزرگ کیوآر لند",
-        subOrgan: "مدیریت همزمان ۴۰ روش تبلیغاتی!",
-        userName: "خانم خوانساری",
-        workField: "پشتیبانی",
+        visitName: "\u06a9\u0627\u0645\u06cc\u0647",
+        organizationName:
+          "\u0633\u0627\u0645\u0627\u0646\u0647 \u0628\u0632\u0631\u06af \u06a9\u06cc\u0648\u0622\u0631 \u0644\u0646\u062f",
+        subOrgan:
+          "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0647\u0645\u0632\u0645\u0627\u0646 \u06f4\u06f0 \u0631\u0648\u0634 \u062a\u0628\u0644\u06cc\u063a\u0627\u062a\u06cc!",
+        userName: "\u06a9\u0627\u0645\u0631\u0627\u0646",
+        workField: "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc",
         phoneNumber: [
           {
             number: "09999903535",
@@ -399,8 +488,7 @@ export const data = {
         companyNumber: "02191017077",
         email: "info@qrland.ir",
         fax: "02191016066",
-        location:
-          "تهران، خیابان شریعتی ، بعد از پل سید خندان\nبن بست خندان ، پلاک 6 ، واحد 3",
+        location: "\u0627\u0635\u0641\u0647\u0627\u0646",
         city: "",
         codePostal: "1541946815",
         province: "",
@@ -409,8 +497,8 @@ export const data = {
         socialMedia: {
           address: [
             {
-              label: "آدرس",
-              text: "لینک سایت مورد نظر را وارد نمایید",
+              label: "\u0622\u062f\u0631\u0633",
+              text: "\u0644\u06cc\u0646\u06a9 \u0633\u0627\u06cc\u062a \u0645\u0648\u0631\u062f \u0646\u0638\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f",
               pattern: "",
               prefix: "URL",
               url: "qrland.ir",
@@ -418,8 +506,8 @@ export const data = {
               svg: "svgLocation",
             },
             {
-              label: "آدرس",
-              text: "لینک سایت مورد نظر را وارد نمایید",
+              label: "\u0622\u062f\u0631\u0633",
+              text: "\u0644\u06cc\u0646\u06a9 \u0633\u0627\u06cc\u062a \u0645\u0648\u0631\u062f \u0646\u0638\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f",
               pattern: "",
               prefix: "URL",
               url: "qr.terminalads.com",
@@ -429,8 +517,9 @@ export const data = {
           ],
           instagram: [
             {
-              label: "اینستاگرام",
-              text: "نام کاربری خود را وارد نمایید",
+              label:
+                "\u0627\u06cc\u0646\u0633\u062a\u0627\u06af\u0631\u0627\u0645",
+              text: "\u0646\u0627\u0645 \u06a9\u0627\u0631\u0628\u0631\u06cc \u062e\u0648\u062f \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f",
               pattern: "https://instagram.com/",
               prefix: "@",
               url: "terminalads",
@@ -440,23 +529,35 @@ export const data = {
           ],
           whatsapp: [
             {
-              label: "واتساپ",
+              label: "\u0648\u0627\u062a\u0633\u0627\u067e",
               text: "+989123456789",
-              pattern: "wa.me/",
+              pattern: "https://wa.me/",
               prefix: "mdi-phone",
               url: "+982191017077",
               img: "/media/socialIcon/40icon/whatsapp.svg",
               svg: "svgWhatsapp",
             },
           ],
+          bale: [
+            {
+              hint: "\u0646\u0627\u0645 \u06a9\u0627\u0631\u0628\u0631\u06cc \u062e\u0648\u062f \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f",
+              label: "\u0628\u0644\u0647",
+              url: "kami",
+              prefix: "@",
+              pattern: "https://ble.ir/",
+              img: "/media/socialIcon/40icon/pr/bale.svg",
+              socialText: "",
+              svg: "svgBale",
+            },
+          ],
         },
         aboutUs:
-          "کیوآر چیست؟\nیک نوع بارکد دو بعدی است که می تواند با استفاده از گوشی های هوشمند و دستگاه های اختصاصی کد خوان، خوانده  می شود.\nکیوآرها به طور مستقیم به متن، ایمیل، وب سایت، شماره تلفن و... متصل می شود. \n\nکیوآر داینامیک چیست؟\nکدهای کیو آر داینامیک متصل به سرورهای اختصاصی پیشرفته و هوشمند هستند.\nاینگونه کلیه داده ها و دیتاها را به صورت اتوماتیک در فضای ابری امن و کاملا حفاظت شده، دسته بندی و فشرده سازی  میکند. همین امر باعث رفع کلیه ضعف های کیوآر های استاتیک  می شود.\nکیوآر داینامیک علاوه بر دارا بودن جدیدترین تکنولوژی های دیجیتالی و هوشمند، کاملا انعطاف پذیر است. و می توان با کیوآر داینامیک تمامی شکاف های موجود در یک مجموعه یا سازمان را برطرف نمود.\n برای حفظ محیط زیست، نیاز است استفاده از کاغذ را کاهش داد. ",
-        copyright: "تمامی حقوق این سایت متعلق به ترمینال تبلیغات می باشد.",
-        center: [51.44663997885132, 35.74305387731438],
-        coordinates: [51.446682645747444, 35.743053507096036],
+          "\u06a9\u06cc\u0648\u0622\u0631 \u0686\u06cc\u0633\u062a\u061f\n\u06cc\u06a9 \u0646\u0648\u0639 \u0628\u0627\u0631\u06a9\u062f \u062f\u0648 \u0628\u0639\u062f\u06cc \u0627\u0633\u062a \u06a9\u0647 \u0645\u06cc \u062a\u0648\u0627\u0646\u062f \u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06af\u0648\u0634\u06cc \u0647\u0627\u06cc \u0647\u0648\u0634\u0645\u0646\u062f \u0648 \u062f\u0633\u062a\u06af\u0627\u0647 \u0647\u0627\u06cc \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u06a9\u062f \u062e\u0648\u0627\u0646\u060c \u062e\u0648\u0627\u0646\u062f\u0647  \u0645\u06cc \u0634\u0648\u062f.\n\u06a9\u06cc\u0648\u0622\u0631\u0647\u0627 \u0628\u0647 \u0637\u0648\u0631 \u0645\u0633\u062a\u0642\u06cc\u0645 \u0628\u0647 \u0645\u062a\u0646\u060c \u0627\u06cc\u0645\u06cc\u0644\u060c \u0648\u0628 \u0633\u0627\u06cc\u062a\u060c \u0634\u0645\u0627\u0631\u0647 \u062a\u0644\u0641\u0646 \u0648... \u0645\u062a\u0635\u0644 \u0645\u06cc \u0634\u0648\u062f. \n\n\u06a9\u06cc\u0648\u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9 \u0686\u06cc\u0633\u062a\u061f\n\u06a9\u062f\u0647\u0627\u06cc \u06a9\u06cc\u0648 \u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9 \u0645\u062a\u0635\u0644 \u0628\u0647 \u0633\u0631\u0648\u0631\u0647\u0627\u06cc \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u067e\u06cc\u0634\u0631\u0641\u062a\u0647 \u0648 \u0647\u0648\u0634\u0645\u0646\u062f \u0647\u0633\u062a\u0646\u062f.\n\u0627\u06cc\u0646\u06af\u0648\u0646\u0647 \u06a9\u0644\u06cc\u0647 \u062f\u0627\u062f\u0647 \u0647\u0627 \u0648 \u062f\u06cc\u062a\u0627\u0647\u0627 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u0627\u062a\u0648\u0645\u0627\u062a\u06cc\u06a9 \u062f\u0631 \u0641\u0636\u0627\u06cc \u0627\u0628\u0631\u06cc \u0627\u0645\u0646 \u0648 \u06a9\u0627\u0645\u0644\u0627 \u062d\u0641\u0627\u0638\u062a \u0634\u062f\u0647\u060c \u062f\u0633\u062a\u0647 \u0628\u0646\u062f\u06cc \u0648 \u0641\u0634\u0631\u062f\u0647 \u0633\u0627\u0632\u06cc  \u0645\u06cc\u06a9\u0646\u062f. \u0647\u0645\u06cc\u0646 \u0627\u0645\u0631 \u0628\u0627\u0639\u062b \u0631\u0641\u0639 \u06a9\u0644\u06cc\u0647 \u0636\u0639\u0641 \u0647\u0627\u06cc \u06a9\u06cc\u0648\u0622\u0631 \u0647\u0627\u06cc \u0627\u0633\u062a\u0627\u062a\u06cc\u06a9  \u0645\u06cc \u0634\u0648\u062f.\n\u06a9\u06cc\u0648\u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9 \u0639\u0644\u0627\u0648\u0647 \u0628\u0631 \u062f\u0627\u0631\u0627 \u0628\u0648\u062f\u0646 \u062c\u062f\u06cc\u062f\u062a\u0631\u06cc\u0646 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0647\u0627\u06cc \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644\u06cc \u0648 \u0647\u0648\u0634\u0645\u0646\u062f\u060c \u06a9\u0627\u0645\u0644\u0627 \u0627\u0646\u0639\u0637\u0627\u0641 \u067e\u0630\u06cc\u0631 \u0627\u0633\u062a. \u0648 \u0645\u06cc \u062a\u0648\u0627\u0646 \u0628\u0627 \u06a9\u06cc\u0648\u0622\u0631 \u062f\u0627\u06cc\u0646\u0627\u0645\u06cc\u06a9 \u062a\u0645\u0627\u0645\u06cc \u0634\u06a9\u0627\u0641 \u0647\u0627\u06cc \u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u06cc\u06a9 \u0645\u062c\u0645\u0648\u0639\u0647 \u06cc\u0627 \u0633\u0627\u0632\u0645\u0627\u0646 \u0631\u0627 \u0628\u0631\u0637\u0631\u0641 \u0646\u0645\u0648\u062f.\n \u0628\u0631\u0627\u06cc \u062d\u0641\u0638 \u0645\u062d\u06cc\u0637 \u0632\u06cc\u0633\u062a\u060c \u0646\u06cc\u0627\u0632 \u0627\u0633\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06a9\u0627\u063a\u0630 \u0631\u0627 \u06a9\u0627\u0647\u0634 \u062f\u0627\u062f. ",
+        copyright:
+          "\u062a\u0645\u0627\u0645\u06cc \u062d\u0642\u0648\u0642 \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a \u0645\u062a\u0639\u0644\u0642 \u0628\u0647 \u062a\u0631\u0645\u06cc\u0646\u0627\u0644 \u062a\u0628\u0644\u06cc\u063a\u0627\u062a \u0645\u06cc \u0628\u0627\u0634\u062f.",
+        coordinates: [51.679801358083125, 32.65354081709471],
         address:
-          "ایران، تهران، شهر تهران، تهران، منطقه ۳ شهر تهران، محله سید خندان، دکتر علی شریعتی، خندان",
+          "\u0627\u06cc\u0631\u0627\u0646\u060c \u0627\u0635\u0641\u0647\u0627\u0646\u060c \u0645\u0646\u0637\u0642\u0647 \u06f3\u060c \u0645\u062d\u0644\u0647 \u0646\u0642\u0634 \u062c\u0647\u0627\u0646\u060c \u0641\u0631\u0634\u0627\u062f\u06cc\u060c \u0634\u0647\u06cc\u062f \u0639\u0644\u06cc\u0631\u0636\u0627 \u0641\u0636\u0627\u0626\u0644\u06cc\u060c \u0646\u0648\u0628\u0647\u0627\u0631\u060c \u06a9\u06cc\u0627\u0646\u060c \u0627\u0645\u0627\u0645 \u0645\u0648\u0633\u06cc \u0635\u062f\u0631\u060c \u062d\u0633\u0646 \u0622\u0628\u0627\u062f\u060c \u0627\u0644\u0641\u062a",
         pallete: {},
         textCards: {
           sectionColor: {
@@ -465,8 +566,9 @@ export const data = {
           },
         },
         pdfSelector: {
-          title: "گالری پی دی اف",
-          description: "توضیحات",
+          title:
+            "\u06af\u0627\u0644\u0631\u06cc \u067e\u06cc \u062f\u06cc \u0627\u0641",
+          description: "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a",
           sectionColor: {
             backGround: "",
             text: "",
@@ -474,8 +576,8 @@ export const data = {
           slider: false,
         },
         Blog: {
-          title: "بلاگ",
-          description: "توضیحات",
+          title: "\u0628\u0644\u0627\u06af",
+          description: "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a",
           slide: true,
           sectionColor: {
             backGround: "",
@@ -483,7 +585,7 @@ export const data = {
           },
         },
         CounterService: {
-          title: "دستاوردها",
+          title: "\u062f\u0633\u062a\u0627\u0648\u0631\u062f\u0647\u0627",
           description: "",
           sectionColor: {
             backGround: "",
@@ -493,49 +595,37 @@ export const data = {
             {
               type: "percent",
               counter: "92",
-              name: "کاربران راضی",
+              name: "\u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0631\u0627\u0636\u06cc",
               icon: "mdi-account",
               link: "",
             },
             {
               type: "number",
               counter: "180",
-              name: "صنف به ما اعتماد کرده اند",
+              name: "\u0635\u0646\u0641 \u0628\u0647 \u0645\u0627 \u0627\u0639\u062a\u0645\u0627\u062f \u06a9\u0631\u062f\u0647 \u0627\u0646\u062f",
               icon: "mdi-google-classroom",
               link: "",
             },
             {
               type: "number",
               counter: "6",
-              name: "خدمت ارائه شده",
+              name: "\u062e\u062f\u0645\u062a \u0627\u0631\u0627\u0626\u0647 \u0634\u062f\u0647",
               icon: "mdi-qrcode-scan",
               link: "",
             },
             {
               type: "number",
               counter: "64",
-              name: "خدمت جدید در راه",
-              icon: "mdi-qrcode-plus",
-              link: "",
-            },
-            {
-              type: "number",
-              counter: "64",
-              name: "خدمت جدید در راه",
-              icon: "mdi-qrcode-plus",
-              link: "",
-            },
-            {
-              type: "number",
-              counter: "64",
-              name: "خدمت جدید در راه",
+              name: "\u062e\u062f\u0645\u062a \u062c\u062f\u06cc\u062f \u062f\u0631 \u0631\u0627\u0647",
               icon: "mdi-qrcode-plus",
               link: "",
             },
           ],
         },
+        center: [51.44663997885132, 35.74305387731438],
         ServiceSection: {
-          title: "به روز باشید...",
+          title:
+            "\u0628\u0647 \u0631\u0648\u0632 \u0628\u0627\u0634\u06cc\u062f...",
           description: "",
           sectionColor: {
             backGround: "linear-gradient(to right , #37A9ADFF, #423890FF)",
@@ -544,10 +634,11 @@ export const data = {
           items: [
             {
               section: {
-                title: "ثبت نام",
-                text: "شما به سرزمین هوشمند دیجیتالی کیوآر لند دعوت شده اید.",
+                title: "\u062b\u0628\u062a \u0646\u0627\u0645",
+                text: "\u0634\u0645\u0627 \u0628\u0647 \u0633\u0631\u0632\u0645\u06cc\u0646 \u0647\u0648\u0634\u0645\u0646\u062f \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644\u06cc \u06a9\u06cc\u0648\u0622\u0631 \u0644\u0646\u062f \u062f\u0639\u0648\u062a \u0634\u062f\u0647 \u0627\u06cc\u062f.",
                 button: {
-                  title: "ثبت نام رایگان",
+                  title:
+                    "\u062b\u0628\u062a \u0646\u0627\u0645 \u0631\u0627\u06cc\u06af\u0627\u0646",
                   icon: "mdi-ballot-recount",
                   background:
                     "linear-gradient(to right , #1AD0D8FF, #2115A7FF)",
@@ -574,28 +665,31 @@ export const data = {
           slider: true,
         },
         VideoGallery: {
-          title: "گالری ویدئو",
+          title:
+            "\u06af\u0627\u0644\u0631\u06cc \u0648\u06cc\u062f\u0626\u0648",
           description:
-            "برای آشنایی بیشتر با خدمات هوشمند سامانه کیوآرلند، ویدئو های زیر را مشاهده فرمایید.",
+            "\u0628\u0631\u0627\u06cc \u0622\u0634\u0646\u0627\u06cc\u06cc \u0628\u06cc\u0634\u062a\u0631 \u0628\u0627 \u062e\u062f\u0645\u0627\u062a \u0647\u0648\u0634\u0645\u0646\u062f \u0633\u0627\u0645\u0627\u0646\u0647 \u06a9\u06cc\u0648\u0622\u0631\u0644\u0646\u062f\u060c \u0648\u06cc\u062f\u0626\u0648 \u0647\u0627\u06cc \u0632\u06cc\u0631 \u0631\u0627 \u0645\u0634\u0627\u0647\u062f\u0647 \u0641\u0631\u0645\u0627\u06cc\u06cc\u062f.",
           sectionColor: {
             backGround: "linear-gradient(to right , #25AD96FF, #2039A4FF)",
             text: "#fff",
           },
         },
         Service: {
-          title: "خدمات کیوآر لند",
+          title:
+            "\u062e\u062f\u0645\u0627\u062a \u06a9\u06cc\u0648\u0622\u0631 \u0644\u0646\u062f",
           slider: false,
           description:
-            "دیگه وقتشه تکنولوژی دیجیتال را به کسب  وکارتان اضافه کنید.",
+            "\u062f\u06cc\u06af\u0647 \u0648\u0642\u062a\u0634\u0647 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644 \u0631\u0627 \u0628\u0647 \u06a9\u0633\u0628  \u0648\u06a9\u0627\u0631\u062a\u0627\u0646 \u0627\u0636\u0627\u0641\u0647 \u06a9\u0646\u06cc\u062f.",
           sectionColor: {
             backGround: "",
             text: "",
           },
         },
         FeedBack: {
-          title: "بازخورد شما",
+          title:
+            "\u0628\u0627\u0632\u062e\u0648\u0631\u062f \u0634\u0645\u0627",
           description:
-            "لطفا با پاسخ گویی به سوالات زیر مارا در خدمات بهتر راهنمایی فرمایید",
+            "\u0644\u0637\u0641\u0627 \u0628\u0627 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u0633\u0648\u0627\u0644\u0627\u062a \u0632\u06cc\u0631 \u0645\u0627\u0631\u0627 \u062f\u0631 \u062e\u062f\u0645\u0627\u062a \u0628\u0647\u062a\u0631 \u0631\u0627\u0647\u0646\u0645\u0627\u06cc\u06cc \u0641\u0631\u0645\u0627\u06cc\u06cc\u062f",
           sectionColor: {
             backGround: "linear-gradient(to right , #FFFFFFFF, #FFFFFFFF)",
             text: "#fff",
@@ -603,32 +697,32 @@ export const data = {
           type: "text",
           items: [
             {
-              question: "چقدر از خدمات کیوآرلند راضی بوده اید؟",
+              question:
+                "\u0686\u0642\u062f\u0631 \u0627\u0632 \u062e\u062f\u0645\u0627\u062a \u06a9\u06cc\u0648\u0622\u0631\u0644\u0646\u062f \u0631\u0627\u0636\u06cc \u0628\u0648\u062f\u0647 \u0627\u06cc\u062f\u061f",
               answer: "",
               value: null,
               description: false,
               forceDesc: false,
-              type: "emoji",
             },
             {
               question:
-                "خدمات کیوآرلند چه میزان از نیازهای شما را پوشش داده است؟",
+                "\u062e\u062f\u0645\u0627\u062a \u06a9\u06cc\u0648\u0622\u0631\u0644\u0646\u062f \u0686\u0647 \u0645\u06cc\u0632\u0627\u0646 \u0627\u0632 \u0646\u06cc\u0627\u0632\u0647\u0627\u06cc \u0634\u0645\u0627 \u0631\u0627 \u067e\u0648\u0634\u0634 \u062f\u0627\u062f\u0647 \u0627\u0633\u062a\u061f",
               answer: "",
               value: null,
               description: false,
               forceDesc: false,
-              type: "tumbs",
             },
             {
               question:
-                "میزان هزینه پرداختی بابت سرویس دریافتی چقدر معقول بوده است؟",
+                "\u0645\u06cc\u0632\u0627\u0646 \u0647\u0632\u06cc\u0646\u0647 \u067e\u0631\u062f\u0627\u062e\u062a\u06cc \u0628\u0627\u0628\u062a \u0633\u0631\u0648\u06cc\u0633 \u062f\u0631\u06cc\u0627\u0641\u062a\u06cc \u0686\u0642\u062f\u0631 \u0645\u0639\u0642\u0648\u0644 \u0628\u0648\u062f\u0647 \u0627\u0633\u062a\u061f",
               answer: "",
               value: null,
               description: false,
               forceDesc: false,
             },
             {
-              question: "برای  بهبود خدمات نظر خود را با ما درمیان بگذارید.",
+              question:
+                "\u0628\u0631\u0627\u06cc  \u0628\u0647\u0628\u0648\u062f \u062e\u062f\u0645\u0627\u062a \u0646\u0638\u0631 \u062e\u0648\u062f \u0631\u0627 \u0628\u0627 \u0645\u0627 \u062f\u0631\u0645\u06cc\u0627\u0646 \u0628\u06af\u0630\u0627\u0631\u06cc\u062f.",
               answer: "",
               value: null,
               description: true,
@@ -637,12 +731,13 @@ export const data = {
           ],
         },
         faq: {
-          title: "سوالات متداول",
-          description: "توضیحات",
+          title:
+            "\u0633\u0648\u0627\u0644\u0627\u062a \u0645\u062a\u062f\u0627\u0648\u0644",
+          description: "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a",
           design: {
             gallery: [
               {
-                name: "گالری عکس",
+                name: "\u06af\u0627\u0644\u0631\u06cc \u0639\u06a9\u0633",
                 images: [],
               },
             ],
@@ -653,27 +748,34 @@ export const data = {
           },
           items: [
             {
-              question: "1. چطوری می تونم سفارش خودم رو ثبت کنم ؟",
-              answer: "کافیست محصولات مورد نظر خود را به سبد خرید اضافه کنید.",
-            },
-            {
-              question: "2. چگونه می توانم در سایت ثبت نام کنم؟",
+              question:
+                "1. \u0686\u0637\u0648\u0631\u06cc \u0645\u06cc \u062a\u0648\u0646\u0645 \u0633\u0641\u0627\u0631\u0634 \u062e\u0648\u062f\u0645 \u0631\u0648 \u062b\u0628\u062a \u06a9\u0646\u0645 \u061f",
               answer:
-                'کافیست بر روی دکمه "ورود" کلیک کنید و پس از وارد کردن شماره همراه، کد پیامک شده را نیز وارد کنید.',
+                "\u06a9\u0627\u0641\u06cc\u0633\u062a \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u0645\u0648\u0631\u062f \u0646\u0638\u0631 \u062e\u0648\u062f \u0631\u0627 \u0628\u0647 \u0633\u0628\u062f \u062e\u0631\u06cc\u062f \u0627\u0636\u0627\u0641\u0647 \u06a9\u0646\u06cc\u062f.",
             },
             {
               question:
-                "3. پس از اینکه سفارشم رو ثبت کردم چقدر طول می کشه به دستم برسه؟",
-              answer: "در سریع ترین زمان ممکن سفارش شما ارسال خواهد شد.",
-            },
-            {
-              question: "4. هزینه ارسال سفارش چقدر هست؟",
-              answer: "هزینه ارسال سفارش نسبت به آدرس شما متغییر خواهد بود.",
+                "2. \u0686\u06af\u0648\u0646\u0647 \u0645\u06cc \u062a\u0648\u0627\u0646\u0645 \u062f\u0631 \u0633\u0627\u06cc\u062a \u062b\u0628\u062a \u0646\u0627\u0645 \u06a9\u0646\u0645\u061f",
+              answer:
+                '\u06a9\u0627\u0641\u06cc\u0633\u062a \u0628\u0631 \u0631\u0648\u06cc \u062f\u06a9\u0645\u0647 "\u0648\u0631\u0648\u062f" \u06a9\u0644\u06cc\u06a9 \u06a9\u0646\u06cc\u062f \u0648 \u067e\u0633 \u0627\u0632 \u0648\u0627\u0631\u062f \u06a9\u0631\u062f\u0646 \u0634\u0645\u0627\u0631\u0647 \u0647\u0645\u0631\u0627\u0647\u060c \u06a9\u062f \u067e\u06cc\u0627\u0645\u06a9 \u0634\u062f\u0647 \u0631\u0627 \u0646\u06cc\u0632 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.',
             },
             {
               question:
-                "5. آیا می تونم بعد از ثبت سفارش، محصولمو تغییر بدم یا کنسل کنم ؟",
-              answer: "خیر.\nامکان تغییر یا لغو وجود ندارد.",
+                "3. \u067e\u0633 \u0627\u0632 \u0627\u06cc\u0646\u06a9\u0647 \u0633\u0641\u0627\u0631\u0634\u0645 \u0631\u0648 \u062b\u0628\u062a \u06a9\u0631\u062f\u0645 \u0686\u0642\u062f\u0631 \u0637\u0648\u0644 \u0645\u06cc \u06a9\u0634\u0647 \u0628\u0647 \u062f\u0633\u062a\u0645 \u0628\u0631\u0633\u0647\u061f",
+              answer:
+                "\u062f\u0631 \u0633\u0631\u06cc\u0639 \u062a\u0631\u06cc\u0646 \u0632\u0645\u0627\u0646 \u0645\u0645\u06a9\u0646 \u0633\u0641\u0627\u0631\u0634 \u0634\u0645\u0627 \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+            },
+            {
+              question:
+                "4. \u0647\u0632\u06cc\u0646\u0647 \u0627\u0631\u0633\u0627\u0644 \u0633\u0641\u0627\u0631\u0634 \u0686\u0642\u062f\u0631 \u0647\u0633\u062a\u061f",
+              answer:
+                "\u0647\u0632\u06cc\u0646\u0647 \u0627\u0631\u0633\u0627\u0644 \u0633\u0641\u0627\u0631\u0634 \u0646\u0633\u0628\u062a \u0628\u0647 \u0622\u062f\u0631\u0633 \u0634\u0645\u0627 \u0645\u062a\u063a\u06cc\u06cc\u0631 \u062e\u0648\u0627\u0647\u062f \u0628\u0648\u062f.",
+            },
+            {
+              question:
+                "5. \u0622\u06cc\u0627 \u0645\u06cc \u062a\u0648\u0646\u0645 \u0628\u0639\u062f \u0627\u0632 \u062b\u0628\u062a \u0633\u0641\u0627\u0631\u0634\u060c \u0645\u062d\u0635\u0648\u0644\u0645\u0648 \u062a\u063a\u06cc\u06cc\u0631 \u0628\u062f\u0645 \u06cc\u0627 \u06a9\u0646\u0633\u0644 \u06a9\u0646\u0645 \u061f",
+              answer:
+                "\u062e\u06cc\u0631.\n\u0627\u0645\u06a9\u0627\u0646 \u062a\u063a\u06cc\u06cc\u0631 \u06cc\u0627 \u0644\u063a\u0648 \u0648\u062c\u0648\u062f \u0646\u062f\u0627\u0631\u062f.",
             },
           ],
         },
@@ -681,111 +783,23 @@ export const data = {
           "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhZjI0ZjA0Y2U2NTQ2ZDAyYzMwNjBmMzAxYWY0NTMxYjhkOTEwODVhMDQ3MGY1ZDc3YjYwY2M4OGRiNjVkZjZkMjIyZWNkZjNmMTJkYmExIn0.eyJhdWQiOiIyMDI5NSIsImp0aSI6ImZhZjI0ZjA0Y2U2NTQ2ZDAyYzMwNjBmMzAxYWY0NTMxYjhkOTEwODVhMDQ3MGY1ZDc3YjYwY2M4OGRiNjVkZjZkMjIyZWNkZjNmMTJkYmExIiwiaWF0IjoxNjcwNjg5MDc4LCJuYmYiOjE2NzA2ODkwNzgsImV4cCI6MTY3MzE5NDY3OCwic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.h-KYgigwSQbp9KYjIjWgBLQRpMy6ABa40dyF4pF99UmndnhDNs-fckFePIdRPkm7GlggWm9yKphj_TJ5b9TyA8m1_gNarjRiPzhAS5ZNGNUaSfnGHA1cUbc71DuUKgohAe2sOmXUkKin0q-ErzDdCczJjLVc218dRkCxLuJIrAY5yZ5yVgK79-Q6misDYP3yLpWaV5uDA3a1VzXppq4G9hm0GCGmsef_WryEx9z1fFuOzoVbuNj2yEKn3mBi2vAyKvV1HRMKMoXy_KLTk8xy-GsSQArOxKvw4Nk8Nvuks0WzSlLygNncQozltpm5Z4kueep-0TrI4xzx6uSjuk20vg",
       },
     },
-    qr: {
-      width: 300,
-      height: 300,
-      data: "qr2.in/3M4G",
-      margin: 5,
-      qrOptions: {
-        typeNumber: 2,
-        mode: "Byte",
-        errorCorrectionLevel: "H",
-      },
-      imageOptions: {
-        hideBackgroundDots: true,
-        imageSize: 0.4,
-        margin: 0,
-      },
-      dotsOptions: {
-        type: "extra-rounded",
-        color: "#6a1a4c",
-        gradient: {
-          type: "linear",
-          rotation: 0,
-          colorStops: [
-            {
-              offset: 0,
-              color: "#4b6cb7",
-            },
-            {
-              offset: 1,
-              color: "#182848",
-            },
-          ],
-        },
-      },
-      backgroundOptions: {
-        color: "#FFFFFFFF",
-      },
-      image: null,
-      dotsOptionsHelper: {
-        colorType: {
-          single: true,
-          gradient: false,
-        },
-        gradient: {
-          linear: true,
-          radial: false,
-          color1: "#6a1a4c",
-          color2: "#6a1a4c",
-          rotation: "0",
-        },
-      },
-      cornersSquareOptions: {
-        type: "extra-rounded",
-        color: "#690a70",
-      },
-      cornersSquareOptionsHelper: {
-        colorType: {
-          single: true,
-          gradient: false,
-        },
-        gradient: {
-          linear: true,
-          radial: false,
-          color1: "#000000",
-          color2: "#000000",
-          rotation: "0",
-        },
-      },
-      cornersDotOptions: {
-        type: "",
-        color: "#b00cab",
-      },
-      cornersDotOptionsHelper: {
-        colorType: {
-          single: true,
-          gradient: false,
-        },
-        gradient: {
-          linear: true,
-          radial: false,
-          color1: "#000000",
-          color2: "#000000",
-          rotation: "0",
-        },
-      },
-      backgroundOptionsHelper: {
-        colorType: {
-          single: true,
-          gradient: false,
-        },
-        gradient: {
-          linear: true,
-          radial: false,
-          color1: "#ffffff",
-          color2: "#ffffff",
-          rotation: "0",
-        },
-      },
-    },
-    updated_at: "2025-04-04 11:28:08",
-    created_at: "2025-04-04 11:28:08",
-    id: 476047,
-    link: "qr2.in/3M4G",
-    created_at_p: "1404-01-15 11:28:08",
-    created_at_diff: "1 ثانیه پیش",
-    updated_at_p: "1404-01-15 11:28:08",
-    updated_at_diff: "1 ثانیه پیش",
+    qr: '{"width":300,"height":300,"data":"qr2.in/-FWE","margin":5,"qrOptions":{"typeNumber":2,"mode":"Byte","errorCorrectionLevel":"H"},"imageOptions":{"hideBackgroundDots":true,"imageSize":0.4,"margin":0},"dotsOptions":{"type":"extra-rounded","color":"#6a1a4c","gradient":{"type":"linear","rotation":0,"colorStops":[{"offset":0,"color":"#EC6F66"},{"offset":1,"color":"#F3A183"}]}},"backgroundOptions":{"color":"#FFFFFFFF"},"image":null,"dotsOptionsHelper":{"colorType":{"single":true,"gradient":false},"gradient":{"linear":true,"radial":false,"color1":"#6a1a4c","color2":"#6a1a4c","rotation":"0"}},"cornersSquareOptions":{"type":"extra-rounded","color":"#690a70"},"cornersSquareOptionsHelper":{"colorType":{"single":true,"gradient":false},"gradient":{"linear":true,"radial":false,"color1":"#000000","color2":"#000000","rotation":"0"}},"cornersDotOptions":{"type":"","color":"#b00cab"},"cornersDotOptionsHelper":{"colorType":{"single":true,"gradient":false},"gradient":{"linear":true,"radial":false,"color1":"#000000","color2":"#000000","rotation":"0"}},"backgroundOptionsHelper":{"colorType":{"single":true,"gradient":false},"gradient":{"linear":true,"radial":false,"color1":"#ffffff","color2":"#ffffff","rotation":"0"}}}',
+    password: null,
+    single_use: null,
+    ios_url: null,
+    android_url: null,
+    windows_url: null,
+    max_click: null,
+    status: "active",
+    activated_at: null,
+    deactivated_at: null,
+    deleted_at: null,
+    created_at: "2025-04-06 12:28:18",
+    updated_at: "2025-04-06 16:25:25",
+    link: "qr2.in/-FWE",
+    created_at_p: "1404-01-17 12:28:18",
+    created_at_diff: "3 \u0633\u0627\u0639\u062a \u067e\u06cc\u0634",
+    updated_at_p: "1404-01-17 16:25:25",
+    updated_at_diff: "1 \u062b\u0627\u0646\u06cc\u0647 \u067e\u06cc\u0634",
   },
 };

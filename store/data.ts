@@ -9,6 +9,7 @@ export const useData = defineStore("data", () => {
   const feedback = datas.FeedBack;
   const CounterService = datas.CounterService;
   const services = datas.service;
+  const questionAn = datas.faq.items;
   const footer = {
     workSheets: datas.WorkSheet,
     phoneNumber: datas.phoneNumber,
@@ -44,5 +45,6 @@ export const useData = defineStore("data", () => {
     services,
     footer,
     abouts,
+    questionAn,
   };
 });

@@ -16,7 +16,7 @@
     </div>
     <div class="w-full flex flex-col justify-center">
       <div class="my-3 flex justify-center">
-        <v-tabs v-model="tabs">
+        <v-tabs dir="rtl" v-model="tabs">
           <v-tab v-for="(item, i) in gallery" :key="i" :value="i">
             {{ item?.name }}
           </v-tab>
@@ -25,17 +25,15 @@
 
       <v-tabs-window v-model="tabs">
         <v-tabs-window-item v-for="(item, i) in gallery" :key="i" :value="i">
-          <div class="w-[80%] flex justify-center align-center">
-            <swipperComponents
-              :images="item.images"
-              :size="{
-                height: '60vh',
-                width: '100%',
-                rounded: '15px',
-                type: 'image',
-              }"
-            />
-          </div>
+          <swipperComponents
+            :images="item.images"
+            :size="{
+              height: '60vh',
+              width: '100%',
+              rounded: '15px',
+              type: 'image',
+            }"
+          />
         </v-tabs-window-item>
       </v-tabs-window>
     </div>

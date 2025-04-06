@@ -16,7 +16,7 @@
     </div>
     <div class="w-full flex flex-col justify-center">
       <div class="my-3 flex justify-center flex-row-reverse">
-        <v-tabs v-model="tabs" class="d-flex flex-row-reverse">
+        <v-tabs dir="rtl" v-model="tabs" class="d-flex flex-row-reverse">
           <v-tab v-for="(item, i) in gallery" :key="i" :value="i">
             {{ item?.name }}
           </v-tab>
@@ -28,8 +28,8 @@
           <swipperComponents
             :images="item.images"
             :size="{
-              height: '60vh',
-              width: '80%',
+              height: '300px',
+              width: '550px',
               rounded: '15px',
               type: 'video',
             }"
